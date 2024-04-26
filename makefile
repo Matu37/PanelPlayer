@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Werror -pthread -O3
+CFLAGS = -Werror -pthread -O3
 LDFLAGS = -pthread
 LDLIBS = -ldl -lwebpdemux
 
