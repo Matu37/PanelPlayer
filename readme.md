@@ -39,3 +39,19 @@ Extensions are a way to read or alter frames without modifying PanelPlayer. A mi
 
 ## Protocol
 Protocol documentation can be found in the `protocol` directory. A Wireshark plugin is included to help with reverse engineering and debugging.
+
+## Service
+Create service /etc/systemd/system/led.service
+
+
+[Unit]
+Description=Led
+
+[Service]
+ExecStart=PanelPlayer-master/build/./panelplayer -p eth1 -w 384 -h 128  ramdrive/filename.webp -s -r 3
+Restart=on-failure
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target
+
