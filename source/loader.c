@@ -68,7 +68,7 @@ static void *loader_process(void *parameter)
 		if (fread(item.data, 1, item.size, file) != item.size)
 		{
 			perror("Failed to read file");
-			free(item.data);
+			//free(item.data); seems to cause issues when not avalibale, there is another free() down the line somewhere.
 		}
 
 close_file:
