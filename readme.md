@@ -51,6 +51,10 @@ Description=Led
 ExecStart=PanelPlayer-master/build/./panelplayer -p eth1 -w 384 -h 128  ramdrive/filename.webp -s -r 3
 Restart=on-failure
 RestartSec=1
+RuntimeMaxSec=180s
+Restart=always
+StandardOutput=null
+StandardError=journal
 
 ## RAMDrive
 /etc/fstab 
