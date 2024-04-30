@@ -52,6 +52,13 @@ ExecStart=PanelPlayer-master/build/./panelplayer -p eth1 -w 384 -h 128  ramdrive
 Restart=on-failure
 RestartSec=1
 
+## RAMDrive
+/etc/fstab 
+
+ledramdrive  /ramdrive  tmpfs  defaults,size=10M,x-gvfs-show  0  0
+
+
+
 [Install]
 WantedBy=multi-user.target
 
